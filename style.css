@@ -1,0 +1,10 @@
+canvas{
+    border: 1px solid orange;
+    height: auto;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
