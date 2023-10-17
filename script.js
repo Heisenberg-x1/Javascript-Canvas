@@ -26,7 +26,6 @@ context.lineTo(85, 50);
 
 context.stroke();
 
-
 // !FILL TEXT
 let canvas2 = document.querySelector(".canvas2");
 let context2 = canvas2.getContext("2d");
@@ -34,7 +33,6 @@ context2.fillStyle = "blue";
 // context2.fillRect(10,10,200,100)
 context2.font = "60px sans-serif";
 context2.fillText("COLLINS", 15, 90);
-
 
 // !STROKE TEXT
 let canvas3 = document.querySelector(".canvas3");
@@ -44,25 +42,45 @@ context3.font = "60px sans-serif";
 context3.strokeText("COLLINS", 15, 90);
 
 // !STROKE RECTANGLE
-const canvas4 = document.querySelector(".canvas4")
-const context4 = canvas4.getContext("2d")
+const canvas4 = document.querySelector(".canvas4");
+const context4 = canvas4.getContext("2d");
 context4.strokeStyle = "orange";
 context4.strokeRect(10, 10, 150, 100);
 
 // !FILL RECTANGLE
-let canvas5 = document.querySelector(".canvas5")
-let context5 = canvas5.getContext("2d")
-context5.fillStyle='orange';
-context5.fillRect(10,10,150,100)
+let canvas5 = document.querySelector(".canvas5");
+let context5 = canvas5.getContext("2d");
+context5.fillStyle = "orange";
+context5.fillRect(10, 10, 150, 100);
 
-// !DRAWING AN IMAGE 
-let canvas6  = document.querySelector(".canvas6")
-let context6 = canvas6.getContext("2d")
-let image = new Image()
-image.src = "rat.png"
-image.onload = function(){
+// !DRAWING AN IMAGE
+let canvas6 = document.querySelector(".canvas6");
+let context6 = canvas6.getContext("2d");
+let image = new Image();
+image.src = "rat.png";
+image.onload = function () {
     context6.drawImage(image, 90, 10, 100, 120);
-    
-}
+};
 
 // !USING CLOSEPATH
+
+let canvas7 = document.querySelector(".canvas7");
+let context7 = canvas7.getContext("2d");
+console.log(canvas7);
+context7.moveTo(10,10)
+context7.lineTo(10,70)
+context7.lineTo(70,70)
+context7.closePath();
+
+context7.stroke()
+
+// !ELLIPSE
+let canvas8 = document.querySelector(".canvas8")
+let context8 = canvas8.getContext("2d")
+context8.beginPath()
+context8.ellipse(80, 50, 30, 50, Math.PI/4, 0, 2 * Math.PI, false); 
+context8.stroke();
+// !ARC
+let canvas9 = document.querySelector(".canvas9")
+let context9 = canvas9.getContext("2d")
+context9.arc(100, 100, 40, Math.PI / 180 * startAngle, Math.PI / 180 * endAngle, anticlockwise);

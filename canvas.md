@@ -48,3 +48,10 @@ context3.strokeStyle = "red";
 context3.font = "60px sans-serif";
 context3.strokeText("COLLINS", 15, 90);
 ```
+- Drawing an eclipse on the canvas. We use the arc() method to draw an eclipse. The arc() method takes six arguments, the x and y coordinates of the center of the eclipse, the radius of the eclipse, the start angle and end angle of the eclipse, and a boolean value that determines whether the eclipse should be drawn in a clockwise or anticlockwise direction.
+```javascript
+let canvas8 = document.querySelector(".canvas8")
+let context8 = canvas8.getContext("2d")
+context8.beginPath()
+context8.ellipse(100, 80, 30, 50, Math.PI/4, 0, 2 * Math.PI); 
+context8.stroke();
